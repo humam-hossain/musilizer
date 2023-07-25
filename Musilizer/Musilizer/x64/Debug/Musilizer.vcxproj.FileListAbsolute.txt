@@ -1,0 +1,2 @@
+E:\github_repo\musilizer\vs_project\Musilizer\Musilizer\x64\Debug\Musilizer.vcxproj.CopyComplete
+E:\github_repo\musilizer\Musilizer\Musilizer\x64\Debug\Musilizer.vcxproj.CopyComplete
