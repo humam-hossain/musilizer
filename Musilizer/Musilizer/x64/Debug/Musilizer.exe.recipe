@@ -2,6 +2,9 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
+      <FullPath>E:\github_repo\musilizer\Musilizer\x64\Debug\Plug.dll</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
       <FullPath>E:\github_repo\musilizer\Musilizer\x64\Debug\Musilizer.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>

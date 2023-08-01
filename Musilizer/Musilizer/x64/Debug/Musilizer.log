@@ -1,2 +1,6 @@
 ﻿  main.cpp
+E:\github_repo\musilizer\Musilizer\Musilizer\main.cpp(131,71): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\github_repo\musilizer\Musilizer\Musilizer\main.cpp(131,53): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\github_repo\musilizer\Musilizer\Musilizer\main.cpp(131,40): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+E:\github_repo\musilizer\Musilizer\Musilizer\main.cpp(131,20): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
   Musilizer.vcxproj -> E:\github_repo\musilizer\Musilizer\x64\Debug\Musilizer.exe
