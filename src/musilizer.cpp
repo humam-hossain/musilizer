@@ -7,8 +7,6 @@
 #include <cmath>
 #include <complex>
 
-#include "plug.h"
-
 #define N 256
 #define ARRAY_LEN(xs) sizeof(xs) / sizeof(xs[0])
 
@@ -88,17 +86,13 @@ void callback(void *bufferData, unsigned int frames)
 
 int main(void)
 {
-	plug_hello();
-
-	return 0;
-
 	int factor = 100;
 	int screen_width = 16 * factor;
 	int screen_height = 9 * factor;
 	InitWindow(screen_width, screen_height, "Musilizer");
 
 	InitAudioDevice();
-	Music music = LoadMusicStream("NOOR � Background Nasheed.ogg");
+	Music music = LoadMusicStream("./assets/NOOR — Background Nasheed.ogg");
 
 	assert(music.stream.sampleSize == 16);
 	assert(music.stream.channels == 2);

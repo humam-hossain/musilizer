@@ -1,4 +1,8 @@
 #!/bin/sh
 
 set -xe
-g++ -Wall -Wextra -o musilizer main.cpp -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
+CFLAGS="-Wall -Wextra"
+LIBS="-lraylib -lGL -lm -lpthread -ldl -lrt -lX11"
+
+mkdir -p ./build/
+g++ $CFLAGS -o ./build/musilizer ./src/musilizer.cpp $LIBS
