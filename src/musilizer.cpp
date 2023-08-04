@@ -1,11 +1,14 @@
 #include <iostream>
 #include <assert.h>
-#include <string.h>
+#include <string>
 #include <stdint.h>
 #include <stdlib.h>
 #include <raylib.h>
 #include <cmath>
 #include <complex>
+#include <dlfcn.h>
+
+#include "plug.h"
 
 #define N 256
 #define ARRAY_LEN(xs) sizeof(xs) / sizeof(xs[0])
@@ -86,6 +89,28 @@ void callback(void *bufferData, unsigned int frames)
 
 int main(void)
 {
+	const char* libplug_file_name = "./libplug.so";
+	
+	void *libplug = dlopen(libplug_file_name, RTLD_NOW);
+
+	if(!libplug){
+		std::cerr << "ERROR: could no load " << libplug_file_name << " : " << dlerror() << "\n";
+		return 1;
+	}
+
+	using PlugFunc = void(*)();
+	PlugFunc plug_hello = reinterpret_cast<PlugFunc>(dlsym(libplug, "plug_hello"));
+
+	if(!plug_hello){
+		std::cerr << "ERROR: could not find plug_hello symbol in " << libplug_file_name << " : " << dlerror() << "\n";
+	}
+
+	std::cout << "Working\n";
+
+	plug_hello();
+
+    return 0;
+
 	int factor = 100;
 	int screen_width = 16 * factor;
 	int screen_height = 9 * factor;
